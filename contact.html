@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact | SpotAlert Live</title>
+<link rel="stylesheet" href="style.css">
+<style>
+body {
+  font-family: "Poppins", Arial, sans-serif;
+  background: #f9fbff;
+  margin: 0;
+  color: #222;
+  padding-top: 90px;
+  text-align: center;
+}
+.frosted-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 24px;
+  z-index: 1000;
+}
+.frosted-header .logo {
+  height: 45px;
+  border-radius: 6px;
+}
+.frosted-header nav a {
+  color: #0078ff;
+  text-decoration: none;
+  margin: 0 12px;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+.frosted-header nav a:hover {
+  color: #005fcc;
+}
+.contact-section {
+  margin: 60px auto;
+  max-width: 600px;
+  background: white;
+  padding: 40px 25px;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 120, 255, 0.1);
+}
+.contact-section h1 {
+  color: #0078ff;
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+.contact-section p {
+  color: #444;
+  margin: 10px 0;
+}
+.contact-email {
+  display: inline-block;
+  color: #0078ff;
+  font-weight: 600;
+  text-decoration: none;
+  margin-top: 10px;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+.contact-email:hover {
+  color: #005fcc;
+}
+footer {
+  margin-top: 40px;
+  padding: 20px;
+  font-size: 0.9rem;
+  color: #777;
+  background: #f1f6ff;
+}
+.footer-links a {
+  color: #0078ff;
+  text-decoration: none;
+  margin: 0 5px;
+}
+.footer-links a:hover {
+  color: #005fcc;
+}
+#shira-assistant {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: linear-gradient(145deg, #0078ff, #5da9ff);
+  color: white;
+  border-radius: 50%;
+  width: 55px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0, 120, 255, 0.4);
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+#shira-assistant:hover {
+  transform: scale(1.08);
+  box-shadow: 0 6px 18px rgba(0, 120, 255, 0.5);
+}
+</style>
+</head>
+<body>
+<header class="frosted-header">
+  <img src="spotalert_logo.png" alt="SpotAlert Logo" class="logo" />
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="plans.html">Plans</a>
+    <a href="login.html">Login</a>
+  </nav>
+</header>
+
+<section class="contact-section">
+  <h1>Contact SpotAlert</h1>
+  <p>We’re here to help with anything you need.</p>
+  <p>Email us directly at:</p>
+  <a href="mailto:admin@spotalert.live" class="contact-email">admin@spotalert.live</a>
+</section>
+
+<footer>
+  <p>© 2025 SpotAlert Live. All rights reserved.</p>
+  <div class="footer-links">
+    <a href="privacy.html">Privacy Policy</a> |
+    <a href="terms.html">Terms & Conditions</a> |
+    <a href="contact.html">Contact</a>
+  </div>
+</footer>
+
+<div id="shira-assistant">💬</div>
+<script>
+document.getElementById('shira-assistant').addEventListener('click', () => {
+  alert("👋 Hi, I’m Shira! You can reach us anytime at admin@spotalert.live.");
+});
+</script>
+</body>
+</html>
