@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Email Verified – SpotAlert</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Poppins", sans-serif;
+      background: linear-gradient(135deg, #007bff, #00c6ff);
+      color: white;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .box {
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      padding: 50px;
+      border-radius: 16px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+      max-width: 420px;
+      width: 90%;
+      text-align: center;
+    }
+
+    .box img {
+      height: 70px;
+      margin-bottom: 18px;
+      filter: drop-shadow(0 0 10px #00e6ff);
+    }
+
+    h2 {
+      margin-bottom: 12px;
+      font-size: 1.9rem;
+      font-weight: 600;
+    }
+
+    p {
+      color: #e0f5ff;
+      font-size: 1rem;
+      margin-bottom: 28px;
+      line-height: 1.4;
+    }
+
+    button {
+      background: white;
+      color: #007bff;
+      border: none;
+      padding: 12px 26px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 12px rgba(255,255,255,0.3);
+    }
+
+    button:hover {
+      background: #f1f9ff;
+      transform: scale(1.05);
+    }
+
+    footer {
+      position: absolute;
+      bottom: 10px;
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.75);
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <img src="spotalert_logo.png" alt="SpotAlert Logo">
+    <h2>✅ Email Verified Successfully</h2>
+    <p>Your SpotAlert account is now active.  
+    You can continue to your dashboard and start using your AI security system.</p>
+
+    <button onclick="window.location.href='dashboard.html'">
+      Go to Dashboard
+    </button>
+  </div>
+
+  <footer>© 2025 SpotAlert.live</footer>
+</body>
+</html>
