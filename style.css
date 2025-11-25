@@ -1,0 +1,279 @@
+/* ======================================
+   GLOBAL THEME — SpotAlert Blue System (Stable Fixed Layout)
+   ====================================== */
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: #f3f7fc;
+  color: #0d1b2a;
+  text-align: center;
+}
+
+/* ===== HEADER (Fully Centered & Stable) ===== */
+.frosted-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 30px;
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  z-index: 1000;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+header .logo {
+  height: 60px;
+  width: auto;
+  background: transparent;
+  filter:
+    drop-shadow(0 0 6px rgba(0, 150, 255, 0.6))
+    drop-shadow(0 0 12px rgba(0, 200, 255, 0.5));
+}
+
+nav {
+  display: flex;
+  gap: 20px;
+}
+nav a {
+  color: #0073ff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+nav a:hover {
+  color: #004aad;
+}
+
+/* ===== HERO ===== */
+.alert-hero {
+  background: linear-gradient(180deg, #aee0ff, #57b3ff);
+  color: white;
+  padding: 100px 20px 70px;
+}
+.alert-hero h1 {
+  font-size: 2.1em;
+  font-weight: 700;
+}
+.alert-hero p {
+  font-size: 1.05em;
+  color: white;
+  max-width: 700px;
+  margin: 20px auto 0;
+  line-height: 1.6;
+}
+
+/* ===== CCTV SECTION ===== */
+.hero {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+.hero-bg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.hero-overlay {
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.45);
+  padding: 28px 32px;
+  border-radius: 12px;
+}
+.hero-overlay h1 {
+  font-size: 1.9em;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+/* ===== FEATURES ===== */
+.features {
+  padding: 80px 20px;
+}
+.features h2 {
+  font-size: 1.9em;
+  color: #001f3f;
+  margin-bottom: 40px;
+}
+.feature-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+}
+.feature {
+  background: white;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+  border-radius: 12px;
+  padding: 25px;
+  width: 280px;
+  transition: 0.3s;
+}
+.feature:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 24px rgba(0, 123, 255, 0.2);
+}
+.feature h3 {
+  color: #001f3f;
+  margin-bottom: 10px;
+  font-size: 1.2em;
+}
+
+/* ===== NOTIFY SECTION ===== */
+.notify-section {
+  background: #007bff;
+  color: white;
+  padding: 50px 20px;
+}
+.start-btn {
+  display: inline-block;
+  background: white;
+  color: #007bff;
+  padding: 12px 30px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+.start-btn:hover {
+  background: #e8f2ff;
+}
+
+/* ===== FOOTER (Fixed Spacing + Alignment) ===== */
+footer {
+  background: #f5f8fc;
+  color: #333;
+  padding: 35px 20px;
+  font-size: 0.9em;
+  text-align: center;
+  border-top: 1px solid rgba(0,0,0,0.05);
+}
+.footer-links {
+  margin-top: 8px;
+}
+.footer-links a {
+  color: #007bff;
+  text-decoration: none;
+  margin: 0 6px;
+}
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+/* ===== DASHBOARD ===== */
+.dashboard-container {
+  max-width: 1100px;
+  margin: 120px auto 60px;
+  padding: 30px;
+  background: #ffffffcc;
+  border-radius: 14px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+#currentPlan {
+  background: linear-gradient(to right, #007bff, #00aaff);
+  color: #fff;
+  text-align: center;
+  padding: 16px 20px;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 1.05rem;
+  box-shadow: 0 0 18px rgba(0, 123, 255, 0.3);
+  margin-bottom: 30px;
+}
+
+/* ===== PLANS ===== */
+.plans-container {
+  max-width: 1000px;
+  margin: 120px auto 60px;
+  padding: 60px 20px;
+  text-align: center;
+  background: linear-gradient(180deg, #dff1ff 0%, #f7fbff 100%);
+  border-radius: 20px;
+  box-shadow: 0 8px 24px rgba(0, 123, 255, 0.1);
+}
+.plan-card {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
+  width: 320px;
+  padding: 30px 25px;
+  text-align: left;
+  transition: all 0.3s ease-in-out;
+  border-top: 4px solid #007bff;
+  position: relative;
+}
+.plan-card.coming-soon::after {
+  content: "Coming Soon";
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: #ff5e00;
+  color: #fff;
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 6px 10px;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(255, 94, 0, 0.4);
+}
+
+/* ===== SHIRA FLOAT BUTTON ===== */
+#shira-assistant {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: linear-gradient(135deg, #00f0ff, #8a2be2);
+  color: white;
+  font-size: 24px;
+  padding: 15px;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 0 25px rgba(138, 43, 226, 0.7),
+              0 0 25px rgba(0, 240, 255, 0.6);
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+  z-index: 1001;
+  animation: shiraPulse 3s ease-in-out infinite;
+}
+#shira-assistant:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 35px rgba(138, 43, 226, 0.9),
+              0 0 35px rgba(0, 240, 255, 0.8);
+}
+@keyframes shiraPulse {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(138,43,226,0.6),
+                0 0 20px rgba(0,240,255,0.4);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(138,43,226,0.9),
+                0 0 40px rgba(0,240,255,0.7);
+  }
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .frosted-header {
+    flex-direction: column;
+    gap: 8px;
+    padding: 14px 0;
+  }
+  nav {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .dashboard-container {
+    margin: 100px 10px;
+    padding: 20px;
+  }
+  .plan-card {
+    width: 90%;
+  }
+}
