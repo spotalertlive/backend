@@ -1,0 +1,29 @@
+<!-- SpotAlert Email Notifications & Logs Section -->
+<div class="alerts-wrapper" id="emailAlertsSection">
+
+  <div class="alerts-header">
+    <h2>📩 Email Alert Notifications</h2>
+    <div class="status-indicator" id="emailStatus">Active</div>
+  </div>
+
+  <!-- Logs Table -->
+  <table class="alert-log-table" id="alertLogTable">
+    <thead>
+      <tr>
+        <th>Timestamp</th>
+        <th>Camera</th>
+        <th>Event</th>
+        <th>Snapshot</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody id="alertLogBody">
+      <!-- Filled dynamically via JS -->
+    </tbody>
+  </table>
+
+  <div class="alert-footer">
+    <a href="#" id="sendTestEmail">Send Test Alert</a> |
+    <a href="#" id="refreshLog">Refresh Logs</a>
+  </div>
+</div>
