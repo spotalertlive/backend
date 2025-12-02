@@ -9,7 +9,11 @@ import { open } from "sqlite";
 import PDFDocument from "pdfkit";
 
 // AWS
-import { RekognitionClient, DetectFacesCommand, SearchFacesByImageCommand } from "@aws-sdk/client-rekognition";
+import {
+  RekognitionClient,
+  SearchFacesByImageCommand
+} from "@aws-sdk/client-rekognition";
+
 import { S3Client, PutObjectCommand } from "@aws-sdk/client-s3";
 import { SESClient, SendEmailCommand } from "@aws-sdk/client-ses";
 
@@ -18,6 +22,7 @@ import Stripe from "stripe";
 
 dotenv.config();
 const app = express();
+
 app.use(cors());
 app.use(express.json());
 
@@ -38,12 +43,12 @@ const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
 // ===== FILE UPLOADS =====
 const upload = multer({ storage: multer.memoryStorage() });
 
-// ===== TEST ROUTE =====
+// ===== HEALTH CHECK =====
 app.get("/", (req, res) => {
-  res.json({ message: "SpotAlert backend running" });
+  res.json({ status: "SpotAlert backend running" });
 });
 
-// ===== FACE UPLOAD ROUTE =====
+// ===== FACE SEARCH =====
 app.post("/upload", upload.single("image"), async (req, res) => {
   try {
     const imageBytes = req.file.buffer;
@@ -53,16 +58,18 @@ app.post("/upload", upload.single("image"), async (req, res) => {
       Image: { Bytes: imageBytes }
     };
 
-    const result = await rekognition.send(new SearchFacesByImageCommand(params));
-    res.json(result);
+    const response = await rekognition.send(
+      new SearchFacesByImageCommand(params)
+    );
 
+    res.json(response);
   } catch (error) {
-    console.error(error);
+    console.error("Rekognition Error:", error);
     res.status(500).json({ error: "Face search failed" });
   }
 });
 
-// ===== SEND EMAIL ALERT =====
+// ===== EMAIL ALERT =====
 app.post("/alert-email", async (req, res) => {
   try {
     const { to, subject, message } = req.body;
@@ -79,9 +86,8 @@ app.post("/alert-email", async (req, res) => {
     await ses.send(new SendEmailCommand(emailParams));
 
     res.json({ status: "Email sent" });
-
-  } catch (err) {
-    console.error(err);
+  } catch (error) {
+    console.error("SES Error:", error);
     res.status(500).json({ error: "Email failed" });
   }
 });
