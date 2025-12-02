@@ -14,3 +14,6 @@ pm2 delete backend 2>/dev/null
 pm2 start server.js --name backend
 
 pm2 save
+
+echo "✅ Backend running on port 3000"
+
