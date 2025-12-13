@@ -5,12 +5,12 @@ import dotenv from "dotenv";
 dotenv.config();
 
 // Optional helpers (only used if files exist)
-let sendEmail = () => {};
+let sendemail = () => {};
 let createVerificationToken = () => null;
-let verifyToken = () => null;
+let verifytoken = () => null;
 
 try {
-  sendEmail = (await import("../utils/sendemail.js")).sendEmail;
+  sendemail = (await import("../utils/sendemail.js")).sendEmail;
   ({ createVerificationToken, verifyToken } = await import("../utils/tokenManager.js"));
 } catch (e) {
   console.log("⚠️ Email verification modules not found — skipping verification features.");
@@ -34,10 +34,10 @@ router.post("/signup", async (req, res) => {
   try {
     const { name, email } = req.body;
 
-    const token = createVerificationToken(email);
+    const token = createVerificationtoken(email);
     const verifyUrl = `${process.env.BASE_URL}/api/auth/verify?token=${token}`;
 
-    await sendEmail(
+    await sendemail(
       email,
       "Verify Your SpotAlert Email",
       path.join(__dirname, "../emails/verify.html"),
