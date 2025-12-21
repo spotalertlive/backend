@@ -22,7 +22,7 @@ import authoritiesRoutes from "./routes/authorities.js";
 import cameraRoutes from "./routes/camera.js";
 import timezoneRoutes from "./routes/timezone.js";
 import verifyRoutes from "./routes/verify.js";
-import knownFacesRoutes from "./routes/known-faces.js";
+import knownFacesRoutes from "./routes/known_faces.js";
 
 // ✅ NEW: ZONES + LOCATIONS + COST (create these route files)
 import locationRoutes from "./routes/locations.js";
@@ -521,7 +521,7 @@ app.use("/api/authorities", authoritiesRoutes);
 app.use("/api/camera", cameraRoutes);
 app.use("/api/timezone", timezoneRoutes);
 app.use("/api/verify", verifyRoutes);
-app.use("/api/known-faces", knownFacesRoutes);
+app.use("/api/known_faces", knownFacesRoutes);
 
 // ✅ NEW: LOCATIONS + ZONES + COST
 app.use("/api/locations", locationRoutes);
