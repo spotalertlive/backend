@@ -26,7 +26,7 @@ import knownFacesRoutes from "./routes/known_faces.js";
 
 // ✅ NEW: ZONES + LOCATIONS + COST (create these route files)
 import locationRoutes from "./routes/locations.js";
-import zoneRoutes from "./routes/zones.js";
+import zoneRoutes from "./routes/zone.js";
 import costRoutes from "./routes/cost.js";
 
 dotenv.config();
