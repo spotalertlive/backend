@@ -2,8 +2,8 @@ export function planGuard(feature) {
   const limits = {
     "Free Trial": { cameras: 2, scans: 200 },
     "Standard": { cameras: 4, scans: 3000 },
-    "Premium": { cameras: 10, scans: 10000 },
-    "Elite": { cameras: 999, scans: 999999 }
+    "Premium": { cameras: 8, scans: 10000 },
+    "Elite": { cameras: 22, scans: 35000 }
   };
 
   return async (req, res, next) => {
