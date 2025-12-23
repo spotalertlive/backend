@@ -68,7 +68,8 @@ app.use(
     credentials: true
   })
 );
-
+// 🤖 Shira AI Assistant
+app.use("/api/shira", shiraRoutes);
 // multer memory (images)
 const upload = multer({ storage: multer.memoryStorage() });
 
