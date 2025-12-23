@@ -19,6 +19,7 @@ import { open } from "sqlite";
 import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
 import crypto from "crypto";
+import shiraRoutes from "./routes/shira.js";
 
 // AWS SDK v3
 import {
